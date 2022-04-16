@@ -3,14 +3,11 @@ const ganache = require('ganache-cli');
 const Web3 = require('web3');
 const web3 = new Web3(ganache.provider());
 
-const fs = require('fs');
-
 const contractFile = require('../compileInbox');
 const abi = contractFile.abi;
 const bytecode = contractFile.evm.bytecode.object;
 
 const INITIAL_STRING = 'Hi there!';
-
 let accounts;
 let inbox;
 
