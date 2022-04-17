@@ -25,7 +25,15 @@ const deploy = async () => {
 		.send({ gas: '1000000', from: accounts[1] });
 
 	console.log('Contract deployed to', result.options.address);
-	console.log(result.options);
+
+// for more info just checking balance of the 2 first accounts
+	web3.eth.getBalance(accounts[0]).then((balance) => {
+		console.log('balance of accounts 0', balance);
+	});
+
+	web3.eth.getBalance(accounts[1]).then((balance1) => {
+		console.log('balance of account 1 ', balance1);
+	});
 	provider.engine.stop();
 };
 deploy();
