@@ -1,5 +1,6 @@
 # solidity-test
 
-local network in ganache 
+deploy.js : deploy in Ropsten with infura 
 
-adding ropsten test network
+
+deployGanache.js : deploy in Ganache local network
